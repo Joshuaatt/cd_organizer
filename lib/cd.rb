@@ -1,10 +1,8 @@
 class CD
   attr_reader(:album, :artist)
 
-  define_method(:initilize) do |album, artist|
-    @album = album
-    @artist = artist
+  define_method(:initialize) do |attributes|
+    @album = attributes.fetch(:album)
+    @artist = attributes.fetch(:artist)
   end
-
-
 end
