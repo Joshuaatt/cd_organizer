@@ -18,9 +18,9 @@ class CD
 
   define_singleton_method(:search) do |search_word|
     found_album = nil
-    @@all_cds.each() do |album|
-      if album.album() == search_word
-        return found_album = album
+    @@all_cds.each() do |test_cd|
+      if test_cd.album.album_name == search_word
+        return found_album = test_cd.album
       end
     end
     found_album
